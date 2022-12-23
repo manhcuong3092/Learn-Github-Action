@@ -11,7 +11,7 @@ jobs:
           node-version: "14"
       - run: npm install -g bats
       - run: bats -v
-  example-job:
+  example-save-output:
     name: Save output
     steps:
       - shell: bash
@@ -22,7 +22,7 @@ jobs:
         with:
           name: output-log-file
           path: output.log
-  example-job:
+  example-download-output:
     steps:
       - name: Download a single artifact
         uses: actions/download-artifact@v3
