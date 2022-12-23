@@ -12,6 +12,7 @@ jobs:
       - run: npm install -g bats
       - run: bats -v
   example-save-output:
+    runs-on: ubuntu-latest
     name: Save output
     steps:
       - shell: bash
@@ -23,6 +24,7 @@ jobs:
           name: output-log-file
           path: output.log
   example-download-output:
+    runs-on: ubuntu-latest
     steps:
       - name: Download a single artifact
         uses: actions/download-artifact@v3
